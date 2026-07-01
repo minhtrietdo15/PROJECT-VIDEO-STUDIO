@@ -1,7 +1,3 @@
-# .clinerules
-
-The following is provided by a root-level .clinerules file where the user has specified instructions for this working directory (c:/Users/Legion 5/OneDrive/Desktop/VIBECODE/project-video-studio)
-
 # HỆ ĐIỀU HÀNH VIBECODE - MULTI-AGENT ROUTER
 
 Bạn là hệ thống AI Multi-Agent. Mọi tác vụ đều phải dựa trên ngữ cảnh từ các file lưu trữ. BẮT BUỘC tuân thủ:
@@ -35,7 +31,7 @@ Bạn là hệ thống AI Multi-Agent. Mọi tác vụ đều phải dựa trên
     2. Nếu có thay đổi, thực hiện `git add .`.
     3. Thực hiện `git commit -m "feat: [tên tính năng hoặc thay đổi]"` với thông điệp rõ ràng.
     4. Thực hiện `git push` để đồng bộ.
-- TUYỆT ĐỐI KHÔNG bao giờ merge trực tiếp vào `main` nếu chưa chạy qua bộ kiểm tra Quality Gate tại `VIBECORE/QUALITY_GATE.md`.
+- TUYỆT ĐỐI không bao giờ merge trực tiếp vào `main` nếu chưa chạy qua bộ kiểm tra Quality Gate tại `VIBECORE/QUALITY_GATE.md`.
 - Luôn tạo branch mới (ví dụ: `feature/tên-tính-năng`) trước khi code, sau đó mới merge về main.
 - Chỉ thực hiện merge về main sau khi lệnh npm test hoặc pytest trả về kết quả thành công.
 
@@ -47,3 +43,59 @@ Bạn là hệ thống AI Multi-Agent. Mọi tác vụ đều phải dựa trên
    - TUYỆT ĐỐI KHÔNG ĐƯỢC NHẢY CÓC sang các tiêu đề (`###`) phía dưới nếu các task ở tiêu đề hiện tại chưa hoàn thành hết.
    - Phải đảm bảo tính phụ thuộc: chỉ được chuyển sang Phase tiếp theo khi TOÀN BỘ task của Phase hiện tại đã là `- [x]`.
    - Nếu không còn task `- [ ]` nào trong toàn bộ file, dừng lại và thông báo: "Tất cả task trong TASKS.md đã hoàn thành."
+
+
+2. **RECOVERY** (bắt buộc chạy trước khi branch — kiểm tra lần chạy trước có để lại trạng thái dang dở không):
+
+   **2.1. Kiểm tra trạng thái git tổng quát:**
+   - Chạy `git status` và `git branch --show-current`.
+   - Nếu đang ở `main`/`master` và working tree sạch → không có gì cần khôi phục, sang thẳng bước 3.
+   - Nếu có uncommitted changes nhưng nhánh hiện tại KHÔNG phải `feature/*` → nhiều khả năng là thay đổi thủ công của người dùng, không thuộc auto-pilot. TUYỆT ĐỐI KHÔNG tự `stash`/`checkout --`/`reset --hard`. HALT ngay: "Phát hiện thay đổi chưa commit trên [nhánh] không do auto-pilot tạo ra. Vui lòng xử lý thủ công." Không chọn task mới.
+
+   **2.2. Sau khi bước 1 chọn được task, tính tên nhánh dự kiến `feature/[slug]` và kiểm tra:**
+   - `git branch --list feature/[slug]` — tồn tại local?
+   - `git ls-remote --heads origin feature/[slug]` — tồn tại remote?
+   - `git log main..feature/[slug]` (nếu có local) — còn commit nào chưa nằm trong main?
+   - Nếu có `gh` CLI: `gh pr list --head feature/[slug] --state open` — có PR đang mở?
+   - Đếm số entry của task này trong `memory/bugs.md` (định dạng ở cuối file) → số lần đã thử.
+
+   **2.3. Ra quyết định — xét đúng thứ tự, dừng ở điều kiện đầu tiên khớp** (ngưỡng tối đa mặc định = 3 lần thử):
+
+   | # | Điều kiện | Quyết định |
+   |---|---|---|
+   | a | Branch tồn tại remote + có PR đang mở | **SKIP** — task ĐÃ pass Quality Gate và push ở lần trước (workflow chỉ push sau khi pass), chỉ chưa merge nên checkbox trên `main` chưa cập nhật. KHÔNG tạo nhánh/PR trùng. Báo: "Task [Tên] đã có PR chờ review ([nhánh])." rồi HALT toàn bộ — không nhảy sang task kế tiếp, vì theo bước 1, task này vẫn "chưa xong" trên `main`. |
+   | b | Branch tồn tại (local hoặc remote đã bị xoá) + `git log main..feature/[slug]` rỗng | **ALREADY MERGED** — code đã vào main, chỉ quên cập nhật checkbox. Xoá branch cũ nếu còn sót, đi thẳng đến bước 6 để cập nhật checkbox, KHÔNG chạy lại IMPLEMENTATION/QUALITY GATE. |
+   | c | Branch tồn tại, không PR, chưa merge + số lần thử < (ngưỡng − 1) | **RESUME** — `git checkout feature/[slug]`, GIỮ NGUYÊN code cũ. Đọc lỗi gần nhất trong `bugs.md`, quay lại bước 4 sửa trực tiếp, rồi chạy lại bước 5. KHÔNG chạy lại bước 3. |
+   | d | ... + số lần thử = (ngưỡng − 1) | **RESTART** — xoá nhánh cũ (`git branch -D`, và `git push origin --delete` nếu đã push), quay về `main`, sang bước 3 làm lại từ đầu với cách tiếp cận khác. |
+   | e | ... + số lần thử ≥ ngưỡng tối đa | **STOP vĩnh viễn cho task này** — không tự retry nữa. GIỮ NGUYÊN nhánh/code để người kiểm tra thủ công. Báo: "Task [Tên] fail Quality Gate [N] lần liên tiếp, cần con người can thiệp." rồi HALT toàn bộ. |
+   | f | Không có branch nào tồn tại | **PROCEED** — bình thường theo bước 3. |
+
+   **2.4.** Dù rơi vào case nào, in 1 dòng ngắn nêu quyết định + lý do trước khi tiếp tục.
+
+3. **SYNC & BRANCHING** (entry point cho case PROCEED/RESTART): checkout `main`, `git pull`, tạo `feature/[slug]`.
+
+4. **IMPLEMENTATION**: thực hiện đúng phạm vi task; nếu vào từ RESUME, ưu tiên sửa trực tiếp phần gây lỗi thay vì viết lại toàn bộ.
+
+5. **QUALITY GATE**:
+   - Chạy test/build.
+   - FAIL: không commit/push. Ghi 1 entry mới vào `memory/bugs.md` (số "lần thử" = số entry cũ của task + 1). Báo lỗi ngắn gọn rồi HALT — KHÔNG tự lặp lại Quality Gate trong cùng lượt chạy; RESUME/RESTART là việc của bước 2 ở lần gọi kế tiếp.
+   - PASS: sang bước 6.
+
+6. **TASK MANAGEMENT**: đổi `- [ ]` → `- [x]` trong `TASKS.md`, làm TRƯỚC khi commit.
+
+7. **GIT OPS**: `git add .`, `git commit -m "feat: [tên task]"`, `git push origin [tên nhánh]`.
+
+8. **PULL REQUEST** (nếu có `gh` CLI): `gh pr create --base main --head [tên nhánh] --title "[tên task]"`.
+
+9. **HALT**: dừng hẳn, báo "Đã xong Task: [...]. Đã push lên nhánh [...]. Mời Review và Merge PR."
+
+---
+**Định dạng chuẩn `memory/bugs.md`** (để RECOVERY đếm được số lần thử):
+## [Tên Task] — lần thử #[N]
+- Thời gian: [timestamp]
+- Nhánh: `feature/[slug]`
+- Lỗi: [mô tả ngắn]
+- Ghi chú: [log quan trọng nhất, không paste toàn bộ stack trace]
+---
+
+   
