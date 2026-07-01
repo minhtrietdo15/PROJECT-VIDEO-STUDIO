@@ -1,0 +1,21 @@
+{
+  "name": "video-localization-ai-studio",
+  "version": "1.0.0",
+  "description": "Video localization AI Studio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "AI CEO / Planner",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.9",
+    "@typescript-eslint/eslint-plugin": "^5.36.2",
+    "@typescript-eslint/parser": "^5.36.2",
+    "eslint": "^8.33.0",
+    "eslint-config-next": "latest",
+    "prettier": "^2.7.1"
+  }
+}
