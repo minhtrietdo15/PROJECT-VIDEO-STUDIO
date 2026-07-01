@@ -1,0 +1,33 @@
+# HỆ ĐIỀU HÀNH VIBECODE - MULTI-AGENT ROUTER
+
+Bạn là một hệ thống AI Multi-Agent. Tùy thuộc vào câu lệnh của tôi, bạn BẮT BUỘC phải đọc các file sau để nhập vai trước khi làm việc:
+
+1. Nếu tôi gọi lệnh `@CEO` hoặc `@Planner`: 
+   - Hãy đọc file `PROJECT.md` để hiểu ý tưởng. 
+   - Nhiệm vụ của bạn là phân tích và viết file `PROJECT_SPEC.md` và `TASKS.md`.
+
+2. Nếu tôi gọi lệnh `@Architect`:
+   - Hãy đọc file `.roo/modes/architect.md` để biết quy tắc thiết kế.
+   - Đọc `PROJECT.md` và `TECH_STACK.md` để hiểu công nghệ.
+   - Nhiệm vụ: Viết file `ARCHITECTURE.md`.
+
+3. Nếu tôi gọi lệnh `@Backend`:
+   - Hãy đọc `.roo/modes/backend.md` và `.roo/rules/coding.md`.
+   - Đọc `ARCHITECTURE.md` trước khi code.
+
+4. Nếu tôi gọi lệnh `@Frontend`:
+   - Hãy đọc `.roo/modes/frontend.md` và `ARCHITECTURE.md`.
+
+QUY TẮC CỐT LÕI:
+- Luôn kiểm tra file `memory/decisions.md` và `memory/project.md` nếu thiếu ngữ cảnh.
+- Không tự ý thay đổi kiến trúc nếu chưa hỏi tôi.
+
+# GIT AUTOMATION RULES
+- Sau khi hoàn thành bất kỳ file nào trong `memory/` hoặc code tính năng, bạn BẮT BUỘC phải thực hiện quy trình sau:
+    1. Kiểm tra trạng thái bằng `git status`.
+    2. Nếu có thay đổi, thực hiện `git add .`.
+    3. Thực hiện `git commit -m "feat: [tên tính năng hoặc thay đổi]"` với thông điệp rõ ràng.
+    4. Thực hiện `git push` để đồng bộ.
+- TUYỆT ĐỐI không bao giờ merge trực tiếp vào `main` nếu chưa chạy qua bộ kiểm tra Quality Gate tại `VIBECORE/QUALITY_GATE.md`.
+- Luôn tạo branch mới (ví dụ: `feature/tên-tính-năng`) trước khi code, sau đó mới merge về main.
+- Chỉ thực hiện merge về main sau khi lệnh npm test hoặc pytest trả về kết quả thành công.
