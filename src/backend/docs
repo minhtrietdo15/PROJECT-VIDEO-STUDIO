@@ -1,0 +1,7 @@
+# API Documentation
+
+This section provides automatic documentation for our backend service using FastAPI. You can access this documentation by navigating to `http://localhost:8000/docs` in your web browser after starting the development server.
+
+## Endpoints
+- **GET /items** - Returns a list of items.
+- **POST /items** - Creates a new item.

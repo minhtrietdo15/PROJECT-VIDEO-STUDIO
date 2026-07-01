@@ -9,15 +9,15 @@
 ## Phase 0: Foundation (2 tuần)
 
 ### 0.1 Repository & Project Structure
-- [ ] Khởi tạo monorepo structure (frontend + backend + shared)
-- [ ] Thiết lập Git flow (main / develop / feature branches)
-- [ ] Viết .gitignore, .editorconfig, .env.example
-- [ ] Cấu hình ESLint, Prettier cho frontend
-- [ ] Cấu hình Ruff / Black cho Python backend
-- [ ] Thiết lập CI/CD pipeline (GitHub Actions)
-  - [ ] Lint & type-check trên PR
-  - [ ] Auto-build Docker images
-  - [ ] Unit test runner
+- [x] Khởi tạo monorepo structure (frontend + backend + shared)
+- [x] Thiết lập Git flow (main / develop / feature branches)
+- [x] Viết .gitignore, .editorconfig, .env.example
+- [x] Cấu hình ESLint, Prettier cho frontend
+- [x] Cấu hình Ruff / Black cho Python backend
+- [x] Thiết lập CI/CD pipeline (GitHub Actions)
+  - [x] Lint & type-check trên PR
+  - [x] Auto-build Docker images
+  - [x] Unit test runner
 
 ### 0.2 Docker Environment
 - [ ] Tạo Dockerfile cho frontend (Node.js multi-stage)
