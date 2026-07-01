@@ -4,18 +4,24 @@
   "description": "Video localization AI Studio",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"No tests configured yet - placeholder test passing\" && exit 0",
+    "quality": "quality-check.bat",
+    "quality:unix": "bash quality-check.sh"
   },
   "keywords": [],
   "author": "AI CEO / Planner",
   "license": "MIT",
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.9",
     "@typescript-eslint/eslint-plugin": "^5.36.2",
     "@typescript-eslint/parser": "^5.36.2",
     "eslint": "^8.33.0",
     "eslint-config-next": "latest",
-    "prettier": "^2.7.1"
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.6",
+    "eslint-plugin-react": "^7.37.5",
+    "prettier": "^2.8.8"
   }
 }

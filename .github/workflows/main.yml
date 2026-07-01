@@ -1,5 +1,4 @@
 name: CI
-
 on:
   push:
     branches: [ main ]
@@ -25,28 +24,21 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-    - name: Lint code
-      run: ruff .
-      env:
-        RUFF_PATH: src/
-    - name: Format code with Black
-      run: black .
-      env:
-        BLACK_PATH: src/
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+
+    - name: Lint and format Python code
+      run: |
+        pip install ruff black
+        ruff src/
+        black src/
 
     - name: Run type-checking
       run: |
         pip install mypy
         mypy --config-file pyproject.toml
-
-    - name: Lint and format Python code
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.9'
-      run: |
-        pip install ruff black
-        ruff src/
-        black src/
 
     - name: Run tests
       run: npm test
