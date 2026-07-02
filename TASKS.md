@@ -89,9 +89,9 @@
 - [x] **Backend**: Video metadata extraction (FFprobe wrapper)
 - [x] **Backend**: Thumbnail generation service (FFmpeg)
 - [x] **Backend**: File validation (format, size, codec check)
-- [ ] **Frontend**: Upload component (drag & drop, progress bar, file picker)
-- [ ] **Frontend**: URL import form
-- [ ] **Frontend**: Video metadata display card (thumbnail, duration, resolution, etc.)
+- [x] **Frontend**: Upload component (drag & drop, progress bar, file picker)
+- [x] **Frontend**: URL import form
+- [x] **Frontend**: Video metadata display card (thumbnail, duration, resolution, etc.)
 
 ### 1.2 Speech-to-Text Module (Whisper)
 - [ ] **Backend**: Whisper integration service
