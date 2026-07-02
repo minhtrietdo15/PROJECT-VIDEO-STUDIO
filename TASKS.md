@@ -56,14 +56,14 @@
 - [x] Cấu hình settings management (pydantic-settings)
 
 ### 0.4 Frontend Foundation (Next.js)
-- [ ] Khởi tạo Next.js 14 project với App Router
-- [ ] Cấu hình TailwindCSS + theme
-- [ ] Cài đặt shadcn/ui component library
-- [ ] Thiết lập React Query (TanStack Query) cho API calls
-- [ ] Thiết lập Zustand / Context cho state management
-- [ ] Cấu hình Axios instance với interceptors
-- [ ] Tạo layout cơ bản (Sidebar + Header + Main Content)
-- [ ] Tạo Error Boundary, Loading skeleton components
+- [x] Khởi tạo Next.js 14 project với App Router
+- [x] Cấu hình TailwindCSS + theme
+- [x] Cài đặt shadcn/ui component library
+- [x] Thiết lập React Query (TanStack Query) cho API calls
+- [x] Thiết lập Zustand / Context cho state management
+- [x] Cấu hình Axios instance với interceptors
+- [x] Tạo layout cơ bản (Sidebar + Header + Main Content)
+- [x] Tạo Error Boundary, Loading skeleton components
 
 ### 0.5 Database Schema
 - [ ] Thiết kế và tạo models:

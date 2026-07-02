@@ -1,17 +1,5 @@
 {
-  "env": {
-    "browser": true,
-    "es2021": true
-  },
-  "extends": ["plugin:react/recommended", "prettier"],
-  "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true
-    },
-    "ecmaVersion": 12,
-    "sourceType": "module"
-  },
-  "plugins": ["react"],
+  "extends": ["next/core-web-vitals", "next/typescript", "prettier"],
   "rules": {
     // Custom rules here if needed
   }
