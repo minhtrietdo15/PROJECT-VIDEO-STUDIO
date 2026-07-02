@@ -1,8 +1,10 @@
 node_modules/
 dist/
+.next/
 *.log
 .env.local
 .idea/
 .vscode/
 .DS_Store
 *~
+*.tsbuildinfo
