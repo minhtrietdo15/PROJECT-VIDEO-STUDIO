@@ -99,3 +99,11 @@ Bạn là hệ thống AI Multi-Agent. Mọi tác vụ đều phải dựa trên
 ---
 
    
+If a terminal command exits successfully
+and the shell prompt returns,
+
+treat the command as COMPLETED.
+
+Never continue waiting for additional output.
+
+Proceed immediately to the next workflow step.

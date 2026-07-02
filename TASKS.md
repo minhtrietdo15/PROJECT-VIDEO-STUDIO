@@ -84,11 +84,11 @@
 ## Phase 1: Core Pipeline (6 tuần)
 
 ### 1.1 Video Import Module
-- [ ] **Backend**: File upload endpoint (multipart, chunked upload cho file lớn)
-- [ ] **Backend**: URL download + validation service
-- [ ] **Backend**: Video metadata extraction (FFprobe wrapper)
-- [ ] **Backend**: Thumbnail generation service (FFmpeg)
-- [ ] **Backend**: File validation (format, size, codec check)
+- [x] **Backend**: File upload endpoint (multipart, chunked upload cho file lớn)
+- [x] **Backend**: URL download + validation service
+- [x] **Backend**: Video metadata extraction (FFprobe wrapper)
+- [x] **Backend**: Thumbnail generation service (FFmpeg)
+- [x] **Backend**: File validation (format, size, codec check)
 - [ ] **Frontend**: Upload component (drag & drop, progress bar, file picker)
 - [ ] **Frontend**: URL import form
 - [ ] **Frontend**: Video metadata display card (thumbnail, duration, resolution, etc.)

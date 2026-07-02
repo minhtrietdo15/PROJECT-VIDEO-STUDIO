@@ -1,7 +1,5 @@
-"""
-Backend Project Configuration
-Build system, dependencies, and tool settings
-"""
+# Backend Project Configuration
+# Build system, dependencies, and tool settings
 
 [build-system]
 requires = ["hatchling"]
