@@ -99,7 +99,3 @@ Bạn là hệ thống AI Multi-Agent. Mọi tác vụ đều phải dựa trên
 ---
 
    
-# CONTINUOUS IMPROVEMENT (RETROSPECTIVE)
-- Sau khi hoàn thành mỗi Section (###), hãy thực hiện "Retrospective" để tối ưu hóa quy trình.
-- Nếu phát hiện quy trình làm việc bị ma sát (ví dụ: AI hay quên tạo folder, code sai style, Git conflict), hãy đề xuất thay đổi `.clinerules`.
-- TUYỆT ĐỐI KHÔNG tự động thay đổi `.clinerules` khi chưa có sự xác nhận của người dùng. Hãy đề xuất cụ thể: [Quy tắc cũ] -> [Quy tắc mới] kèm lý do.
