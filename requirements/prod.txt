@@ -1,0 +1,6 @@
+# Production dependencies
+-r base.txt
+
+# ASGI server with production settings
+uvicorn[standard]>=0.25.0
+gunicorn>=21.2.0
