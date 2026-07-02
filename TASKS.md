@@ -89,7 +89,7 @@
 - [x] **Backend**: Video metadata extraction (FFprobe wrapper)
 - [x] **Backend**: Thumbnail generation service (FFmpeg)
 - [x] **Backend**: File validation (format, size, codec check)
-- [ ] **Frontend**: Upload component (drag & drop, progress bar, file picker)
+- [x] **Frontend**: Upload component (drag & drop, progress bar, file picker)
 - [ ] **Frontend**: URL import form
 - [ ] **Frontend**: Video metadata display card (thumbnail, duration, resolution, etc.)
 
