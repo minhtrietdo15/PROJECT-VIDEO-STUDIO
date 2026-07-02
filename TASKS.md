@@ -20,16 +20,16 @@
   - [x] Unit test runner
 
 ### 0.2 Docker Environment
-- [ ] Tạo Dockerfile cho frontend (Node.js multi-stage)
-- [ ] Tạo Dockerfile cho backend (Python slim)
-- [ ] Tạo docker-compose.yml với services:
-  - [ ] frontend (Next.js dev server)
-  - [ ] backend (FastAPI + Uvicorn)
-  - [ ] postgres (database)
-  - [ ] redis (queue broker)
-  - [ ] celery-worker (task processing)
-- [ ] Thiết lập volume mounts cho project data
-- [ ] Thiết lập network isolation
+- [x] Tạo Dockerfile cho frontend (Node.js multi-stage)
+- [x] Tạo Dockerfile cho backend (Python slim)
+- [x] Tạo docker-compose.yml với services:
+  - [x] frontend (Next.js dev server)
+  - [x] backend (FastAPI + Uvicorn)
+  - [x] postgres (database)
+  - [x] redis (queue broker)
+  - [x] celery-worker (task processing)
+- [x] Thiết lập volume mounts cho project data
+- [x] Thiết lập network isolation
 
 ### 0.3 Backend Foundation (FastAPI)
 - [ ] Khởi tạo project structure:
