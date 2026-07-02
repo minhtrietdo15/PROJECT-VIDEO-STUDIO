@@ -32,7 +32,7 @@
 - [x] Thiết lập network isolation
 
 ### 0.3 Backend Foundation (FastAPI)
-- [ ] Khởi tạo project structure:
+- [x] Khởi tạo project structure:
   ```
   backend/
   ├── app/
@@ -48,12 +48,12 @@
   ├── requirements/
   └── Dockerfile
   ```
-- [ ] Cấu hình FastAPI app (middleware, CORS, logging)
-- [ ] Thiết lập SQLAlchemy + Alembic migrations
-- [ ] Thiết lập Redis connection
-- [ ] Thiết lập Celery app + task base class
-- [ ] Viết health check endpoint (`/health`)
-- [ ] Cấu hình settings management (pydantic-settings)
+- [x] Cấu hình FastAPI app (middleware, CORS, logging)
+- [x] Thiết lập SQLAlchemy + Alembic migrations
+- [x] Thiết lập Redis connection
+- [x] Thiết lập Celery app + task base class
+- [x] Viết health check endpoint (`/health`)
+- [x] Cấu hình settings management (pydantic-settings)
 
 ### 0.4 Frontend Foundation (Next.js)
 - [ ] Khởi tạo Next.js 14 project với App Router
