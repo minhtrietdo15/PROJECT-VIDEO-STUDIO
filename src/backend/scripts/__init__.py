@@ -1,0 +1,1 @@
+"""Seed and utility scripts for Video Localization AI Studio."""

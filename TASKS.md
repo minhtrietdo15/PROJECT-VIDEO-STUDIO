@@ -66,29 +66,29 @@
 - [x] Tạo Error Boundary, Loading skeleton components
 
 ### 0.5 Database Schema
-- [ ] Thiết kế và tạo models:
-  - [ ] **User**: id, email, name, avatar, settings
-  - [ ] **Project**: id, user_id, title, source_lang, target_lang, status, created_at, updated_at
-  - [ ] **Video**: id, project_id, filename, path, duration, resolution, fps, size, codec, thumbnail_path
-  - [ ] **Transcript**: id, project_id, segments (JSON), raw_text, language
-  - [ ] **Translation**: id, transcript_id, translated_text, segments (JSON), style, engine_used
-  - [ ] **Dubbing**: id, project_id, voice_id, audio_path, speed, pitch, volume
-  - [ ] **Subtitle**: id, project_id, format, content (JSON), style_config (JSON)
-  - [ ] **Branding**: id, project_id, intro_template, outro_template, watermark_config, bg_music_path
-  - [ ] **RenderTask**: id, project_id, status, progress, error_log, output_path, settings (JSON)
-- [ ] Viết Alembic migration scripts
-- [ ] Tạo seed data scripts
+- [x] Thiết kế và tạo models:
+  - [x] **User**: id, email, name, avatar, settings (model exists at src/backend/app/models/)
+  - [x] **Project**: id, user_id, title, source_lang, target_lang, status, created_at, updated_at
+  - [x] **Video**: id, project_id, filename, path, duration, resolution, fps, size, codec, thumbnail_path
+  - [x] **Transcript**: id, project_id, segments (JSON), raw_text, language
+  - [x] **Translation**: id, transcript_id, translated_text, segments (JSON), style, engine_used
+  - [x] **Dubbing**: id, project_id, voice_id, audio_path, speed, pitch, volume
+  - [x] **Subtitle**: id, project_id, format, content (JSON), style_config (JSON)
+  - [x] **Branding**: id, project_id, intro_template, outro_template, watermark_config, bg_music_path
+  - [x] **RenderTask**: id, project_id, status, progress, error_log, output_path, settings (JSON)
+- [x] Viết Alembic migration scripts (001_initial_schema.py)
+- [x] Tạo seed data scripts (scripts/seed_data.py)
 
 ---
 
 ## Phase 1: Core Pipeline (6 tuần)
 
 ### 1.1 Video Import Module
-- [ ] **Backend**: File upload endpoint (multipart, chunked upload cho file lớn)
-- [ ] **Backend**: URL download + validation service
-- [ ] **Backend**: Video metadata extraction (FFprobe wrapper)
-- [ ] **Backend**: Thumbnail generation service (FFmpeg)
-- [ ] **Backend**: File validation (format, size, codec check)
+- [x] **Backend**: File upload endpoint (multipart, chunked upload cho file lớn)
+- [x] **Backend**: URL download + validation service
+- [x] **Backend**: Video metadata extraction (FFprobe wrapper)
+- [x] **Backend**: Thumbnail generation service (FFmpeg)
+- [x] **Backend**: File validation (format, size, codec check)
 - [ ] **Frontend**: Upload component (drag & drop, progress bar, file picker)
 - [ ] **Frontend**: URL import form
 - [ ] **Frontend**: Video metadata display card (thumbnail, duration, resolution, etc.)

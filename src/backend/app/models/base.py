@@ -11,6 +11,7 @@ from sqlalchemy import DateTime, MetaData, String, func
 from sqlalchemy.dialects.postgresql import UUID
 from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker, create_async_engine
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, declared_attr
+from sqlalchemy.pool import StaticPool
 
 from app.core.config import settings
 
@@ -25,11 +26,19 @@ convention = {
 metadata = MetaData(naming_convention=convention)
 
 # ─── Engine & Session ────────────────────────────────────────
+_engine_kwargs = {
+    "echo": settings.DATABASE_ECHO,
+}
+if settings.DATABASE_URL.startswith("sqlite"):
+    _engine_kwargs["poolclass"] = StaticPool
+    _engine_kwargs["connect_args"] = {"check_same_thread": False}
+else:
+    _engine_kwargs["pool_size"] = settings.DATABASE_POOL_SIZE
+    _engine_kwargs["max_overflow"] = settings.DATABASE_MAX_OVERFLOW
+
 engine = create_async_engine(
     settings.DATABASE_URL,
-    echo=settings.DATABASE_ECHO,
-    pool_size=settings.DATABASE_POOL_SIZE,
-    max_overflow=settings.DATABASE_MAX_OVERFLOW,
+    **_engine_kwargs,
 )
 
 async_session_factory = async_sessionmaker(
