@@ -105,12 +105,12 @@
 - [x] **Backend**: Celery task for STT processing
   - [x] Progress reporting (current segment, ETA)
   - [x] Error handling & retry logic
-- [ ] **Frontend**: Transcript editor
-  - [ ] Display segments with timestamps
-  - [ ] Inline edit text
-  - [ ] Adjust segment boundaries (drag handles on timeline)
-  - [ ] Playback sync (highlight current segment)
-- [ ] **Frontend**: STT configuration panel (model selection, language)
+ - [x] **Frontend**: Transcript editor
+   - [x] Display segments with timestamps
+   - [x] Inline edit text
+   - [x] Adjust segment boundaries (drag handles on timeline)
+   - [x] Playback sync (highlight current segment)
+ - [x] **Frontend**: STT configuration panel (model selection, language)
 
 ### 1.3 Translation Module
 - [ ] **Backend**: Translation engine abstraction (Strategy pattern)
