@@ -110,7 +110,7 @@
    - [x] Inline edit text
    - [x] Adjust segment boundaries (drag handles on timeline)
    - [x] Playback sync (highlight current segment)
- - [ ] **Frontend**: STT configuration panel (model selection, language)
+ - [x] **Frontend**: STT configuration panel (model selection, language)
 
 ### 1.3 Translation Module
 - [ ] **Backend**: Translation engine abstraction (Strategy pattern)
