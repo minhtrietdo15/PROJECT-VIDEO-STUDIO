@@ -94,17 +94,17 @@
 - [x] **Frontend**: Video metadata display card (thumbnail, duration, resolution, etc.)
 
 ### 1.2 Speech-to-Text Module (Whisper)
-- [ ] **Backend**: Whisper integration service
-  - [ ] Support all model sizes (tiny → large)
-  - [ ] GPU acceleration (CUDA) / CPU fallback
-  - [ ] Language auto-detection
-- [ ] **Backend**: Segment processing
-  - [ ] Word-level timestamp alignment
-  - [ ] Segment merging/splitting logic
-  - [ ] Output normalization (JSON format)
-- [ ] **Backend**: Celery task for STT processing
-  - [ ] Progress reporting (current segment, ETA)
-  - [ ] Error handling & retry logic
+- [x] **Backend**: Whisper integration service
+  - [x] Support all model sizes (tiny → large)
+  - [x] GPU acceleration (CUDA) / CPU fallback
+  - [x] Language auto-detection
+- [x] **Backend**: Segment processing
+  - [x] Word-level timestamp alignment
+  - [x] Segment merging/splitting logic
+  - [x] Output normalization (JSON format)
+- [x] **Backend**: Celery task for STT processing
+  - [x] Progress reporting (current segment, ETA)
+  - [x] Error handling & retry logic
 - [ ] **Frontend**: Transcript editor
   - [ ] Display segments with timestamps
   - [ ] Inline edit text
