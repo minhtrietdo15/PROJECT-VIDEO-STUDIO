@@ -155,25 +155,25 @@
   - [x] Audio waveform preview
 
 ### 1.5 Video Processing Engine (FFmpeg)
-- [ ] **Backend**: FFmpeg command builder
-  - [ ] Video assembly pipeline (intro → main → outro)
-  - [ ] Audio replacement service
-  - [ ] Subtitle burning service (hardcode)
-  - [ ] Subtitle embedding service (softcode/mux)
-  - [ ] Resolution scaling
-  - [ ] Codec selection (H.264 / H.265)
-  - [ ] GPU acceleration (CUDA, VAAPI, VideoToolbox)
-- [ ] **Backend**: Audio processing
-  - [ ] Volume normalization (EBU R128 / LUFS)
-  - [ ] Noise reduction (afftdn filter)
-  - [ ] Crossfade transitions
-- [ ] **Backend**: Celery task for video rendering
-  - [ ] Progress reporting (frame-level percentage)
-  - [ ] ETA calculation
-  - [ ] Cancel/resume support
-- [ ] **Backend**: Export service
-  - [ ] Multiple output formats (MP4, MOV, MKV)
-  - [ ] Quality presets (fast/balanced/best)
+- [x] **Backend**: FFmpeg command builder
+  - [x] Video assembly pipeline (intro → main → outro)
+  - [x] Audio replacement service
+  - [x] Subtitle burning service (hardcode)
+  - [x] Subtitle embedding service (softcode/mux)
+  - [x] Resolution scaling
+  - [x] Codec selection (H.264 / H.265)
+  - [x] GPU acceleration (CUDA, VAAPI, VideoToolbox)
+- [x] **Backend**: Audio processing
+  - [x] Volume normalization (EBU R128 / LUFS)
+  - [x] Noise reduction (afftdn filter)
+  - [x] Crossfade transitions
+- [x] **Backend**: Celery task for video rendering
+  - [x] Progress reporting (frame-level percentage)
+  - [x] ETA calculation
+  - [x] Cancel/resume support
+- [x] **Backend**: Export service
+  - [x] Multiple output formats (MP4, MOV, MKV)
+  - [x] Quality presets (fast/balanced/best)
 - [ ] **Frontend**: Export configuration
   - [ ] Format/resolution selector
   - [ ] Quality preset selector
