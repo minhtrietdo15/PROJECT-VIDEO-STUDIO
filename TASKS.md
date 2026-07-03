@@ -174,11 +174,11 @@
 - [x] **Backend**: Export service
   - [x] Multiple output formats (MP4, MOV, MKV)
   - [x] Quality presets (fast/balanced/best)
-- [ ] **Frontend**: Export configuration
-  - [ ] Format/resolution selector
-  - [ ] Quality preset selector
-  - [ ] Progress display with cancel button
-  - [ ] Download button after completion
+- [x] **Frontend**: Export configuration
+  - [x] Format/resolution selector
+  - [x] Quality preset selector
+  - [x] Progress display with cancel button
+  - [x] Download button after completion
 
 ---
 
