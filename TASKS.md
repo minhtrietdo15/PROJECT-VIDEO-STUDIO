@@ -133,21 +133,21 @@
   - [x] Translation quality indicators
 
 ### 1.4 Voice Dubbing Module (TTS)
-- [ ] **Backend**: TTS engine abstraction
-  - [ ] Coqui TTS adapter (tiếng Việt models)
-  - [ ] Piper TTS adapter
-  - [ ] Edge-TTS adapter (free online)
-  - [ ] Voice profile management (5+ voices)
-- [ ] **Backend**: Voice customization
-  - [ ] Speed adjustment (SSML/audio manipulation)
-  - [ ] Pitch shifting (FFmpeg)
-  - [ ] Volume normalization (LUFS target)
-- [ ] **Backend**: Audio sync service
-  - [ ] Time compression/expansion (match video duration)
-  - [ ] Crossfade between segments
-- [ ] **Backend**: Celery task for TTS
-  - [ ] Batch generate audio segments
-  - [ ] Stitch segments into full audio
+- [x] **Backend**: TTS engine abstraction
+  - [x] Coqui TTS adapter (tiếng Việt models)
+  - [x] Piper TTS adapter
+  - [x] Edge-TTS adapter (free online)
+  - [x] Voice profile management (5+ voices)
+- [x] **Backend**: Voice customization
+  - [x] Speed adjustment (SSML/audio manipulation)
+  - [x] Pitch shifting (FFmpeg)
+  - [x] Volume normalization (LUFS target)
+- [x] **Backend**: Audio sync service
+  - [x] Time compression/expansion (match video duration)
+  - [x] Crossfade between segments
+- [x] **Backend**: Celery task for TTS
+  - [x] Batch generate audio segments
+  - [x] Stitch segments into full audio
 - [ ] **Frontend**: Voice configuration
   - [ ] Voice preview (play sample)
   - [ ] Speed/pitch/volume sliders
