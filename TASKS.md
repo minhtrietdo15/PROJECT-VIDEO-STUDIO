@@ -148,11 +148,11 @@
 - [x] **Backend**: Celery task for TTS
   - [x] Batch generate audio segments
   - [x] Stitch segments into full audio
-- [ ] **Frontend**: Voice configuration
-  - [ ] Voice preview (play sample)
-  - [ ] Speed/pitch/volume sliders
-  - [ ] Voice selector grid
-  - [ ] Audio waveform preview
+- [x] **Frontend**: Voice configuration
+  - [x] Voice preview (play sample)
+  - [x] Speed/pitch/volume sliders
+  - [x] Voice selector grid
+  - [x] Audio waveform preview
 
 ### 1.5 Video Processing Engine (FFmpeg)
 - [ ] **Backend**: FFmpeg command builder
