@@ -125,12 +125,12 @@
 - [x] **Backend**: Celery task for translation
   - [x] Progress tracking per segment
   - [x] Fallback engine if one fails
-- [ ] **Frontend**: Translation interface
-  - [ ] Side-by-side view (original vs translated)
-  - [ ] Style selector dropdown
-  - [ ] Engine selector
-  - [ ] Segment-level re-translate button
-  - [ ] Translation quality indicators
+- [x] **Frontend**: Translation interface
+  - [x] Side-by-side view (original vs translated)
+  - [x] Style selector dropdown
+  - [x] Engine selector
+  - [x] Segment-level re-translate button
+  - [x] Translation quality indicators
 
 ### 1.4 Voice Dubbing Module (TTS)
 - [ ] **Backend**: TTS engine abstraction
