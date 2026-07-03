@@ -113,18 +113,18 @@
  - [x] **Frontend**: STT configuration panel (model selection, language)
 
 ### 1.3 Translation Module
-- [ ] **Backend**: Translation engine abstraction (Strategy pattern)
-  - [ ] Local LLM adapter (Ollama / Llama.cpp)
-  - [ ] OpenAI API adapter
-  - [ ] Gemini API adapter
-  - [ ] Claude API adapter
-- [ ] **Backend**: Translation prompt engineering
-  - [ ] Style templates (Trung tính, Tự nhiên, Video ngắn, Giáo dục)
-  - [ ] Context preservation rules (names, technical terms)
-  - [ ] Batch translation (theo segments)
-- [ ] **Backend**: Celery task for translation
-  - [ ] Progress tracking per segment
-  - [ ] Fallback engine if one fails
+- [x] **Backend**: Translation engine abstraction (Strategy pattern)
+  - [x] Local LLM adapter (Ollama / Llama.cpp)
+  - [x] OpenAI API adapter
+  - [x] Gemini API adapter
+  - [x] Claude API adapter
+- [x] **Backend**: Translation prompt engineering
+  - [x] Style templates (Trung tính, Tự nhiên, Video ngắn, Giáo dục)
+  - [x] Context preservation rules (names, technical terms)
+  - [x] Batch translation (theo segments)
+- [x] **Backend**: Celery task for translation
+  - [x] Progress tracking per segment
+  - [x] Fallback engine if one fails
 - [ ] **Frontend**: Translation interface
   - [ ] Side-by-side view (original vs translated)
   - [ ] Style selector dropdown
