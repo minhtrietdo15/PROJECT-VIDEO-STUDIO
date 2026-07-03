@@ -185,17 +185,17 @@
 ## Phase 2: UI/UX (4 tuần)
 
 ### 2.1 Dashboard
-- [ ] **Frontend**: Project list view
-  - [ ] Grid/list toggle
-  - [ ] Search & filter (by status, date)
-  - [ ] Sort (by name, created date, updated date)
-  - [ ] Project thumbnails
-- [ ] **Frontend**: Create new project dialog
-  - [ ] Name input
-  - [ ] Source language selector
-  - [ ] Target language selector
-- [ ] **Frontend**: Quick actions (continue, duplicate, delete)
-- [ ] **Frontend**: Welcome/onboarding screen for new users
+- [x] **Frontend**: Project list view
+  - [x] Grid/list toggle
+  - [x] Search & filter (by status, date)
+  - [x] Sort (by name, created date, updated date)
+  - [x] Project thumbnails
+- [x] **Frontend**: Create new project dialog
+  - [x] Name input
+  - [x] Source language selector
+  - [x] Target language selector
+- [x] **Frontend**: Quick actions (continue, duplicate, delete)
+- [x] **Frontend**: Welcome/onboarding screen for new users
 - [ ] **Backend**: Project CRUD API endpoints
 - [ ] **Backend**: Dashboard stats API (total projects, storage used, etc.)
 
