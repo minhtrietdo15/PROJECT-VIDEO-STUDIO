@@ -5,7 +5,7 @@ Stores AI assistant conversation history
 
 from typing import Optional
 
-from sqlalchemy import Enum, Float, ForeignKey, String, Text
+from sqlalchemy import Enum, Float, ForeignKey, Integer, String, Text
 from sqlalchemy.dialects.postgresql import UUID, JSONB
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 

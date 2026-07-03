@@ -123,3 +123,56 @@ async def delete_project(
     if not project:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Project not found")
     await db.delete(project)
+    await db.flush()
+
+
+@router.post("/{project_id}/duplicate", response_model=ProjectResponse, status_code=status.HTTP_201_CREATED)
+async def duplicate_project(
+    project_id: str,
+    user_id: str = Depends(get_current_user),
+    db: AsyncSession = Depends(get_db),
+) -> ProjectResponse:
+    """Duplicate an existing project."""
+    stmt = select(Project).where(Project.id == uuid.UUID(project_id), Project.user_id == user_id)
+    result = await db.execute(stmt)
+    project = result.scalar_one_or_none()
+    if not project:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Project not found")
+
+    new_project = Project(
+        user_id=user_id,
+        title=f"{project.title} (Copy)",
+        source_lang=project.source_lang,
+        target_lang=project.target_lang,
+        description=project.description,
+        settings=project.settings or {},
+    )
+    db.add(new_project)
+    await db.flush()
+    await db.refresh(new_project)
+    return ProjectResponse.model_validate(new_project)
+
+
+@router.get("/stats/dashboard", response_model=dict)
+async def dashboard_stats(
+    user_id: str = Depends(get_current_user),
+    db: AsyncSession = Depends(get_db),
+) -> dict:
+    """Return dashboard statistics for the current user."""
+    total_stmt = select(func.count()).select_from(Project).where(Project.user_id == user_id)
+    total = (await db.execute(total_stmt)).scalar_one()
+
+    status_counts = {}
+    for status in ProjectStatus:
+        stmt = (
+            select(func.count())
+            .select_from(Project)
+            .where(Project.user_id == user_id, Project.status == status)
+        )
+        status_counts[status.value] = (await db.execute(stmt)).scalar_one()
+
+    return {
+        "total_projects": total,
+        "status_counts": status_counts,
+        "storage_used_mb": 0,
+    }
