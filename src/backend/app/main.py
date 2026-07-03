@@ -13,6 +13,8 @@ from app.core.config import settings
 from app.core.events import lifespan_events
 from app.core.logging import setup_logging
 from app.core.middleware import RequestLoggingMiddleware
+from app.models import base  # noqa: F401
+from app.models import branding, chat, dubbing, project, render_task, subtitle, transcript, translation, video, voice_profile, youtube_metadata  # noqa: F401,E501
 
 
 @asynccontextmanager

@@ -196,8 +196,8 @@
   - [x] Target language selector
 - [x] **Frontend**: Quick actions (continue, duplicate, delete)
 - [x] **Frontend**: Welcome/onboarding screen for new users
-- [ ] **Backend**: Project CRUD API endpoints
-- [ ] **Backend**: Dashboard stats API (total projects, storage used, etc.)
+- [x] **Backend**: Project CRUD API endpoints
+- [x] **Backend**: Dashboard stats API (total projects, storage used, etc.)
 
 ### 2.2 Project Workspace
 - [ ] **Frontend**: Pipeline step navigation (stepper / tabs)

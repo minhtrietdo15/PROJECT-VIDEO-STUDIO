@@ -5,8 +5,9 @@ Request/response models for project endpoints
 
 from datetime import datetime
 from typing import Any, Optional
+from uuid import UUID
 
-from pydantic import BaseModel, ConfigDict, Field
+from pydantic import BaseModel, ConfigDict, Field, field_validator
 
 from app.models.project import ProjectStatus
 from app.schemas.common import TimestampedModel
@@ -38,7 +39,17 @@ class ProjectResponse(ProjectBase, TimestampedModel):
     user_id: str
     status: ProjectStatus
 
-    model_config = ConfigDict(from_attributes=True)
+    model_config = ConfigDict(
+        from_attributes=True,
+        populate_by_name=True,
+    )
+
+    @field_validator('id', mode='before')
+    @classmethod
+    def id_to_str(cls, v):
+        if isinstance(v, UUID):
+            return str(v)
+        return v
 
 
 class ProjectListResponse(BaseModel):
