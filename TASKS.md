@@ -229,14 +229,14 @@
 - [x] **Backend**: Subtitle styling renderer (ASS format with styling)
 
 ### 2.4 Branding Module
-- [ ] **Frontend**: Intro template editor
-  - [ ] Logo upload + positioning
-  - [ ] Channel name text input
-  - [ ] Animation style selector
-  - [ ] Duration slider (3-15 seconds)
-  - [ ] Audio upload (brand music)
-  - [ ] Fade in/out toggles
-  - [ ] Save as template
+- [x] **Frontend**: Intro template editor
+  - [x] Logo upload + positioning
+  - [x] Channel name text input
+  - [x] Animation style selector
+  - [x] Duration slider (3-15 seconds)
+  - [x] Audio upload (brand music)
+  - [x] Fade in/out toggles
+  - [x] Save as template
 - [ ] **Frontend**: Outro template editor
   - [ ] Subscribe button animation
   - [ ] Like animation
