@@ -213,13 +213,13 @@
   - [x] Drag segments to adjust timing
   - [x] Split/merge segments
   - [x] Snap to grid (keyframes)
-- [ ] **Frontend**: Subtitle styling panel
-  - [ ] Font picker (system fonts)
-  - [ ] Color picker + presets
-  - [ ] Border/shadow controls
-  - [ ] Position presets (top, bottom, custom)
-  - [ ] Animation selector (fade, slide, typewriter, none)
-  - [ ] Preview panel (real-time)
+- [x] **Frontend**: Subtitle styling panel
+  - [x] Font picker (system fonts)
+  - [x] Color picker + presets
+  - [x] Border/shadow controls
+  - [x] Position presets (top, bottom, custom)
+  - [x] Animation selector (fade, slide, typewriter, none)
+  - [x] Preview panel (real-time)
 - [ ] **Frontend**: Subtitle text editor
   - [ ] Multi-line support
   - [ ] Character limit per line
