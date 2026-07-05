@@ -205,7 +205,7 @@
 - [x] **Frontend**: Auto-save indicator
 - [x] **Frontend**: Unsaved changes warning
 - [x] **Frontend**: Project settings panel (rename, delete, export project)
-- [ ] **Backend**: Project settings API
+- [x] **Backend**: Project settings API (export endpoint)
 
 ### 2.3 Subtitle Editor (Trực quan)
 - [ ] **Frontend**: Timeline component
