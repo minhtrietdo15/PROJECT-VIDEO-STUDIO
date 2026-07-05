@@ -200,11 +200,11 @@
 - [x] **Backend**: Dashboard stats API (total projects, storage used, etc.)
 
 ### 2.2 Project Workspace
-- [ ] **Frontend**: Pipeline step navigation (stepper / tabs)
-- [ ] **Frontend**: Project sidebar (file info, settings, timeline)
-- [ ] **Frontend**: Auto-save indicator
-- [ ] **Frontend**: Unsaved changes warning
-- [ ] **Frontend**: Project settings panel (rename, delete, export project)
+- [x] **Frontend**: Pipeline step navigation (stepper / tabs)
+- [x] **Frontend**: Project sidebar (file info, settings, timeline)
+- [x] **Frontend**: Auto-save indicator
+- [x] **Frontend**: Unsaved changes warning
+- [x] **Frontend**: Project settings panel (rename, delete, export project)
 - [ ] **Backend**: Project settings API
 
 ### 2.3 Subtitle Editor (Trực quan)
