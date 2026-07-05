@@ -344,10 +344,10 @@
   - [ ] Save intermediate results (transcript, translation, audio)
   - [ ] Resume from last checkpoint on restart
   - [ ] Auto-recovery on system crash
-- [ ] **Frontend**: Error display
-  - [ ] Toast notifications for errors
-  - [ ] Error detail modal (with stack trace option)
-  - [ ] Retry buttons
+- [x] **Frontend**: Error display
+  - [x] Toast notifications for errors
+  - [x] Error detail modal (with stack trace option)
+  - [x] Retry buttons
   - [ ] Offline detection
 
 ### 4.2 Testing
