@@ -237,12 +237,12 @@
   - [x] Audio upload (brand music)
   - [x] Fade in/out toggles
   - [x] Save as template
-- [ ] **Frontend**: Outro template editor
-  - [ ] Subscribe button animation
-  - [ ] Like animation
-  - [ ] QR code generator (URL input)
-  - [ ] Website URL display
-  - [ ] Social links (YouTube, Facebook, TikTok, Instagram)
+- [x] **Frontend**: Outro template editor
+  - [x] Subscribe button animation
+  - [x] Like animation
+  - [x] QR code generator (URL input)
+  - [x] Website URL display
+  - [x] Social links (YouTube, Facebook, TikTok, Instagram)
 - [ ] **Frontend**: Watermark overlay
   - [ ] Image upload (logo)
   - [ ] Position presets (4 corners, center)
