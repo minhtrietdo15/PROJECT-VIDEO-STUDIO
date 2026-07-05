@@ -208,11 +208,11 @@
 - [x] **Backend**: Project settings API (export endpoint)
 
 ### 2.3 Subtitle Editor (Trực quan)
-- [ ] **Frontend**: Timeline component
-  - [ ] Zoom in/out (second-level to minute-level)
-  - [ ] Drag segments to adjust timing
-  - [ ] Split/merge segments
-  - [ ] Snap to grid (keyframes)
+- [x] **Frontend**: Timeline component
+  - [x] Zoom in/out (second-level to minute-level)
+  - [x] Drag segments to adjust timing
+  - [x] Split/merge segments
+  - [x] Snap to grid (keyframes)
 - [ ] **Frontend**: Subtitle styling panel
   - [ ] Font picker (system fonts)
   - [ ] Color picker + presets
