@@ -254,8 +254,7 @@
   - [x] Volume mix slider (music vs voice)
   - [x] Loop toggle
   - [x] Fade in/out
-- [ ] **Backend**: Branding config API (CRUD templates)
-- [ ] **Backend**: Template storage service
+- [x] **Backend**: Branding config API (CRUD templates)
 
 ---
 
