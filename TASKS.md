@@ -243,12 +243,12 @@
   - [x] QR code generator (URL input)
   - [x] Website URL display
   - [x] Social links (YouTube, Facebook, TikTok, Instagram)
-- [ ] **Frontend**: Watermark overlay
-  - [ ] Image upload (logo)
-  - [ ] Position presets (4 corners, center)
-  - [ ] Opacity slider
-  - [ ] Size slider
-  - [ ] Show entire video / specific range
+- [x] **Frontend**: Watermark overlay
+  - [x] Image upload (logo)
+  - [x] Position presets (4 corners, center)
+  - [x] Opacity slider
+  - [x] Size slider
+  - [x] Show entire video / specific range
 - [ ] **Frontend**: Background music
   - [ ] File upload
   - [ ] Volume mix slider (music vs voice)
