@@ -229,31 +229,31 @@
 - [x] **Backend**: Subtitle styling renderer (ASS format with styling)
 
 ### 2.4 Branding Module
-- [ ] **Frontend**: Intro template editor
-  - [ ] Logo upload + positioning
-  - [ ] Channel name text input
-  - [ ] Animation style selector
-  - [ ] Duration slider (3-15 seconds)
-  - [ ] Audio upload (brand music)
-  - [ ] Fade in/out toggles
-  - [ ] Save as template
-- [ ] **Frontend**: Outro template editor
-  - [ ] Subscribe button animation
-  - [ ] Like animation
-  - [ ] QR code generator (URL input)
-  - [ ] Website URL display
-  - [ ] Social links (YouTube, Facebook, TikTok, Instagram)
-- [ ] **Frontend**: Watermark overlay
-  - [ ] Image upload (logo)
-  - [ ] Position presets (4 corners, center)
-  - [ ] Opacity slider
-  - [ ] Size slider
-  - [ ] Show entire video / specific range
-- [ ] **Frontend**: Background music
-  - [ ] File upload
-  - [ ] Volume mix slider (music vs voice)
-  - [ ] Loop toggle
-  - [ ] Fade in/out
+- [x] **Frontend**: Intro template editor
+  - [x] Logo upload + positioning
+  - [x] Channel name text input
+  - [x] Animation style selector
+  - [x] Duration slider (3-15 seconds)
+  - [x] Audio upload (brand music)
+  - [x] Fade in/out toggles
+  - [x] Save as template
+- [x] **Frontend**: Outro template editor
+  - [x] Subscribe button animation
+  - [x] Like animation
+  - [x] QR code generator (URL input)
+  - [x] Website URL display
+  - [x] Social links (YouTube, Facebook, TikTok, Instagram)
+- [x] **Frontend**: Watermark overlay
+  - [x] Image upload (logo)
+  - [x] Position presets (4 corners, center)
+  - [x] Opacity slider
+  - [x] Size slider
+  - [x] Show entire video / specific range
+- [x] **Frontend**: Background music
+  - [x] File upload
+  - [x] Volume mix slider (music vs voice)
+  - [x] Loop toggle
+  - [x] Fade in/out
 - [ ] **Backend**: Branding config API (CRUD templates)
 - [ ] **Backend**: Template storage service
 
