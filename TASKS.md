@@ -360,11 +360,11 @@
   - [ ] Full pipeline test (STT → Translation → TTS → Render)
   - [ ] Database CRUD tests
   - [ ] File upload/download tests
-- [ ] **Frontend**: Component tests (Vitest + Testing Library)
-  - [ ] Upload component tests
-  - [ ] Transcript editor tests
-  - [ ] Subtitle editor tests
-  - [ ] Dashboard tests
+- [x] **Frontend**: Component tests (Vitest + Testing Library)
+  - [x] Upload component tests
+  - [x] Transcript editor tests
+  - [x] Subtitle editor tests
+  - [x] Dashboard tests
 - [ ] **Frontend**: E2E tests (Playwright)
   - [ ] User flow: Create project → Upload → STT → Translate → Export
   - [ ] Batch processing flow
