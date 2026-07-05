@@ -176,3 +176,33 @@ async def dashboard_stats(
         "status_counts": status_counts,
         "storage_used_mb": 0,
     }
+
+
+@router.post("/{project_id}/export", response_model=dict)
+async def export_project(
+    project_id: str,
+    user_id: str = Depends(get_current_user),
+    db: AsyncSession = Depends(get_db),
+) -> dict:
+    """
+    Export project data as a downloadable package.
+    
+    Returns project metadata and file references for export.
+    """
+    stmt = select(Project).where(Project.id == uuid.UUID(project_id), Project.user_id == user_id)
+    result = await db.execute(stmt)
+    project = result.scalar_one_or_none()
+    if not project:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Project not found")
+
+    return {
+        "project_id": str(project.id),
+        "title": project.title,
+        "source_lang": project.source_lang,
+        "target_lang": project.target_lang,
+        "description": project.description,
+        "settings": project.settings,
+        "status": project.status.value,
+        "created_at": project.created_at.isoformat() if project.created_at else None,
+        "updated_at": project.updated_at.isoformat() if project.updated_at else None,
+    }
