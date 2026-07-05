@@ -225,8 +225,7 @@
   - [x] Character limit per line
   - [x] Auto-line-break
   - [ ] Spell check (future)
-- [ ] **Frontend**: Format selector (SRT/ASS/VTT preview)
-- [ ] **Backend**: Subtitle styling renderer (ASS format with styling)
+- [x] **Frontend**: Format selector (SRT/ASS/VTT preview)
 
 ### 2.4 Branding Module
 - [ ] **Frontend**: Intro template editor
