@@ -249,11 +249,11 @@
   - [x] Opacity slider
   - [x] Size slider
   - [x] Show entire video / specific range
-- [ ] **Frontend**: Background music
-  - [ ] File upload
-  - [ ] Volume mix slider (music vs voice)
-  - [ ] Loop toggle
-  - [ ] Fade in/out
+- [x] **Frontend**: Background music
+  - [x] File upload
+  - [x] Volume mix slider (music vs voice)
+  - [x] Loop toggle
+  - [x] Fade in/out
 - [ ] **Backend**: Branding config API (CRUD templates)
 - [ ] **Backend**: Template storage service
 
