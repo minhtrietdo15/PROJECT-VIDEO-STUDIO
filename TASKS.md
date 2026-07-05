@@ -220,13 +220,12 @@
   - [x] Position presets (top, bottom, custom)
   - [x] Animation selector (fade, slide, typewriter, none)
   - [x] Preview panel (real-time)
-- [ ] **Frontend**: Subtitle text editor
-  - [ ] Multi-line support
-  - [ ] Character limit per line
-  - [ ] Auto-line-break
+- [x] **Frontend**: Subtitle text editor
+  - [x] Multi-line support
+  - [x] Character limit per line
+  - [x] Auto-line-break
   - [ ] Spell check (future)
 - [ ] **Frontend**: Format selector (SRT/ASS/VTT preview)
-- [ ] **Backend**: Subtitle generation service (pysubs2)
 - [ ] **Backend**: Subtitle styling renderer (ASS format with styling)
 
 ### 2.4 Branding Module
